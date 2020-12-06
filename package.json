@@ -1,0 +1,105 @@
+{
+  "name": "react-typescript-template",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Afzaal Ahmad",
+    "email": "afzaalahmad866@gmail.com",
+    "url": "https://github.com/afzaalahmad"
+  },
+  "scripts": {
+    "start:dev": "react-scripts start",
+    "eject": "react-scripts eject",
+    "prebuild": "rimraf build",
+    "build": "react-app-rewired build",
+    "start": "node -r dotenv/config server.js",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
+    "lint": "npx eslint \"./src/**/*.{ts,tsx,js,jsx}\"",
+    "lint:fix": "npx eslint --fix \"./src/**/*.{ts,tsx,js,jsx}\""
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^1.0.1",
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "classnames": "^2.2.6",
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-static-gzip": "^2.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "query-string": "^6.13.6",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-hook-form": "^6.11.5",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^3.1.0",
+    "secure-ls": "^1.2.6",
+    "styled-components": "^5.2.1",
+    "yup": "^0.31.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "npm run format",
+      "npm run lint:fix",
+      "git add --all"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not ie <= 11",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^4.5.0",
+    "@types/classnames": "^2.2.11",
+    "@types/jsonwebtoken": "^8.3.5",
+    "@types/lodash": "^4.14.164",
+    "@types/react": "^16.9.55",
+    "@types/react-bootstrap": "^0.32.24",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/react-select": "^3.0.23",
+    "@types/styled-components": "^5.1.4",
+    "@types/yup": "^0.29.9",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "brotli-webpack-plugin": "^1.1.0",
+    "compression-webpack-plugin": "^6.1.1",
+    "customize-cra": "^1.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "react-app-rewired": "^2.1.6",
+    "react-scripts": "^3.4.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.5",
+    "webpack-bundle-analyzer": "^4.2.0"
+  }
+}

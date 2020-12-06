@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?h71xyf');
+  src: url('../fonts/icomoon.eot?h71xyf#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?h71xyf') format('truetype'),
+    url('../fonts/icomoon.woff?h71xyf') format('woff'),
+    url('../fonts/icomoon.svg?h71xyf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+  content: '\e900';
+}
+.icon-arrow-left:before {
+  content: '\e901';
+}
+.icon-arrow-right:before {
+  content: '\e902';
+}
+.icon-arrow-up:before {
+  content: '\e903';
+}
+.icon-at:before {
+  content: '\e904';
+}
+.icon-bolt:before {
+  content: '\e905';
+}
+.icon-building:before {
+  content: '\e906';
+}
+.icon-camera:before {
+  content: '\e907';
+}
+.icon-caret-down:before {
+  content: '\e908';
+}
+.icon-caret-left:before {
+  content: '\e909';
+}
+.icon-caret-right:before {
+  content: '\e90a';
+}
+.icon-caret-up:before {
+  content: '\e90b';
+}
+.icon-chart-bar:before {
+  content: '\e90c';
+}
+.icon-check-circle:before {
+  content: '\e90d';
+}
+.icon-chevron-down:before {
+  content: '\e90e';
+}
+.icon-chevron-left:before {
+  content: '\e90f';
+}
+.icon-chevron-right:before {
+  content: '\e910';
+}
+.icon-chevron-up:before {
+  content: '\e911';
+}
+.icon-cross:before {
+  content: '\e912';
+}
+.icon-dashboard:before {
+  content: '\e913';
+}
+.icon-envelope:before {
+  content: '\e914';
+}
+.icon-home:before {
+  content: '\e915';
+}
+.icon-lock:before {
+  content: '\e916';
+}
+.icon-menu-right:before {
+  content: '\e917';
+}
+.icon-question-circle:before {
+  content: '\e918';
+}
+.icon-save:before {
+  content: '\e919';
+}
+.icon-search:before {
+  content: '\e91a';
+}
+.icon-setting:before {
+  content: '\e91b';
+}
+.icon-sign-out:before {
+  content: '\e91c';
+}
+.icon-trash:before {
+  content: '\e91d';
+}
+.icon-user:before {
+  content: '\e91e';
+}
+.icon-user-circle:before {
+  content: '\e91f';
+}
