@@ -27,7 +27,7 @@ const app = express();
 app.use(compression());
 // the __dirname is the current directory from where the script is running
 app.use((req, res, next) => {
-  if (req.headers['x-forwarded-proto'] === 'https') {
+  if (req.headers['x-forwarded-proto'] !== 'https') {
     res.redirect(302, 'https://' + req.headers.host + req.originalUrl);
   } else {
     const host = req.headers.host;
