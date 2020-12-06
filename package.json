@@ -7,6 +7,10 @@
     "email": "afzaalahmad866@gmail.com",
     "url": "https://github.com/afzaalahmad"
   },
+  "engines": {
+    "node": ">=10.21.0",
+    "yarn": ">=1.22.5"
+  },
   "scripts": {
     "start:dev": "react-scripts start",
     "eject": "react-scripts eject",
