@@ -14,6 +14,7 @@ import ls from '../../utils/storage.utils';
 import { ROLES, TOKEN_KEY } from '../../common/constants';
 import { executeOnSuccess } from '../../utils/misc.utils';
 import qs from 'query-string';
+import images from '../../utils/img.utils';
 
 const Login: React.FC = () => {
   const history = useHistory();
@@ -64,7 +65,7 @@ const Login: React.FC = () => {
       <div className="form--canvas animation-fadeIn">
         <div className="form__logo-canvas text-center">
           <a className="form__logo d-inline-flex">
-            <img src="/images/logo.png" alt="Logo" width="92" />
+            <img src={images.logo} alt="Logo" width="92" />
           </a>
         </div>
         <div className="form--block">

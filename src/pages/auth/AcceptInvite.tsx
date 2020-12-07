@@ -14,6 +14,7 @@ import {
   AcceptInviteFormFields,
   AcceptInviteFormSchema,
 } from '../../state/auth/forms/acceptInvite.form';
+import images from '../../utils/img.utils';
 
 const AcceptInvite: React.FC = () => {
   const history = useHistory();
@@ -52,7 +53,7 @@ const AcceptInvite: React.FC = () => {
       <div className="container">
         <div className="text-center text-sm-left">
           <a className="form__logo d-inline-flex">
-            <img src="/images/logo.png" alt="Logo" width="92" />
+            <img src={images.logo} alt="Logo" width="92" />
           </a>
         </div>
         <div className="form--canvas animation-fadeIn">

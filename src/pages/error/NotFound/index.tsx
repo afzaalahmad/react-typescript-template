@@ -1,5 +1,6 @@
 import React from 'react';
 import StyledNotFound from './styled';
+import images from '../../../utils/img.utils';
 
 const NotFound: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ const NotFound: React.FC = () => {
       <div className="container--sm text-center animation-fadeIn">
         <div className="text-center">
           <a className="form__logo d-inline-flex mb-4 pb-3">
-            <img src="/images/logo.png" alt="Logo" width="92" />
+            <img src={images.logo} alt="Logo" width="92" />
           </a>
         </div>
         <h3 className="form__heading text-center mb-3">It seems you got lost.</h3>

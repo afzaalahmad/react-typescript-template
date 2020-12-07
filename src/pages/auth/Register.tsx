@@ -11,6 +11,7 @@ import FormButton from '../../components/shared/Button';
 import { useCheckToken, useRegister } from '../../state/auth/auth.hook';
 import { errorExtractor } from '../../utils/error.utils';
 import { executeOnSuccess } from '../../utils/misc.utils';
+import images from '../../utils/img.utils';
 
 const Register: React.FC = () => {
   const history = useHistory();
@@ -39,7 +40,7 @@ const Register: React.FC = () => {
       <div className="container">
         <div className="text-center text-sm-left">
           <a className="form__logo d-inline-flex">
-            <img src="/images/logo.png" alt="Logo" width="92" />
+            <img src={images.logo} alt="Logo" width="92" />
           </a>
         </div>
         <div className="form--canvas animation-fadeIn">
