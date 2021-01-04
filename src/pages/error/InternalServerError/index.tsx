@@ -11,14 +11,19 @@ const InternalServerError: React.FC = () => {
             <img src={images.logo} alt="Logo" width="92" />
           </a>
         </div>
-        <h3 className="form__heading text-center mb-3">Internal Server Error.</h3>
+        <h3 className="form__heading text-center mb-3">Internal Server Error!</h3>
         <p className="para__md d-flex flex-column align-items-center mb-3 pb-2">
-          <span className="d-inline-block mb-1">The page you are looking for does not exist.</span>
-          <span>
-            Go back to the{' '}
-            <a href="/" className="form__link">
-              home page
-            </a>
+          <span className="d-inline-block mb-1">
+            Sorry, something went wrong. Please{' '}
+            <a
+              href="mailto:info@soundqa.com?subject=Internal%20Server%20Error"
+              className="form__link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              contact us
+            </a>{' '}
+            to report this issue or try again later.
           </span>
         </p>
       </div>

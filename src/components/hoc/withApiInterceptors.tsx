@@ -6,6 +6,8 @@ import { TOKEN_KEY } from '../../common/constants';
 import { useHistory } from 'react-router';
 import InternalServerError from '../../pages/error/InternalServerError';
 import Loader from '../shared/Loader';
+import { stringify } from 'query-string';
+import NetworkError from '../../pages/error/NetworkError';
 
 interface Props {
   [key: string]: any;
@@ -25,21 +27,21 @@ const withApiInterceptors = <T extends Props>(WrappedComponent: React.FC<T>) => 
       });
       const responseInterceptor = api.interceptors.response.use(
         (res: AxiosResponse) => res,
-        (e: any) => {
-          setStatus(e?.response?.status);
-          if (
-            e?.response?.status === 401 &&
-            !window.location.pathname.startsWith('/login') &&
-            !window.location.pathname.startsWith('/register') &&
-            !window.location.pathname.startsWith('/verify') &&
-            !window.location.pathname.startsWith('/register/notice') &&
-            !window.location.pathname.startsWith('/forgot') &&
-            !window.location.pathname.startsWith('/reset')
-          ) {
+        (error: any) => {
+          console.error('API Error', error);
+          setStatus(error?.response?.status);
+          if (error?.response?.status === 401) {
             ls.remove(TOKEN_KEY);
-            history.push(`/login?return_url=${encodeURIComponent(window.location.href)}`);
+            history.push({
+              pathname: '/login',
+              search: `?${stringify({
+                return_url: encodeURIComponent(window.location.href),
+              })}`,
+            });
+          } else if (!error?.response?.status && String(error).includes('Network Error')) {
+            setStatus(600);
           }
-          throw e;
+          throw error;
         },
       );
       setInterceptorsRegistered(true);
@@ -54,6 +56,8 @@ const withApiInterceptors = <T extends Props>(WrappedComponent: React.FC<T>) => 
       switch (status) {
         case 500:
           return <InternalServerError />;
+        case 600:
+          return <NetworkError />;
         default:
           return <WrappedComponent {...props} />;
       }

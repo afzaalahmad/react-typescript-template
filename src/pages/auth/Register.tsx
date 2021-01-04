@@ -35,6 +35,9 @@ const Register: React.FC = () => {
     registerAccount(data);
   };
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  console.log(data.alpha.beta);
   return (
     <div className="form--page signup--page">
       <div className="container">
